@@ -57,10 +57,10 @@ body {
       float: right;
       display: block;
     }
-  }
+}
   
-  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 600px) {
+  
+@media screen and (max-width: 600px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
       position: absolute;
@@ -72,7 +72,7 @@ body {
       display: block;
       text-align: left;
     }
-  }
+}
 
 .headersection{
     background-color: bisque;
@@ -92,7 +92,7 @@ body {
 }
 
 .heading h1 {
-    font-size: 80px;
+    font-size: 60px;
 }
 
 .heading h3 {
@@ -104,6 +104,14 @@ body {
     width: 500px;
     color: white;
     margin-top: 20px;
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+    .firstheading,
+    .secondheading {
+      font-size: 10px;
+    }
 }
 
 .card {
@@ -131,64 +139,89 @@ body {
 }
 
 
-/* CATALOGUES */
-
 * {
     box-sizing: border-box;
-  }
+}
   
-
-  .row {
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    
+}
+  
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+  
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+  
+.row {
     margin: 8px -16px;
-  }
+}
   
-  /* Add padding BETWEEN each column (if you want) */
-  .row,
-  .row > .column {
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
     padding: 8px;
-  }
+}
   
-  /* Create three equal columns that floats next to each other */
-  .column {
+/* Create four equal columns that floats next to each other */
+.column {
     float: left;
-    width: 33.33%;
-    display: none; /* Hide columns by default */
-  }
+    width: 25%;
+}
   
-  /* Clear floats after rows */
-  .row:after {
+/* Clear floats after rows */ 
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
   
-  /* Content */
-  .content {
+/* Content */
+.content {
     background-color: white;
     padding: 10px;
-  }
+}
   
-  /* The "show" class is added to the filtered elements */
-  .show {
-    display: block;
-  }
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+}
   
-  /* Style the buttons */
-  .btn {
-    border: none;
-    outline: none;
-    padding: 12px 16px;
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+}
+
+/* Buttons */
+
+.btn {
+    border: 2px solid black;
     background-color: white;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
     cursor: pointer;
-  }
+}
   
-  /* Add a grey background color on mouse-over */
-  .btn:hover {
-    background-color: #ddd;
-  }
+/* Green */
+.success {
+    border-color: #000000;
+    color: rgb(0, 0, 0);
+}
   
-  /* Add a dark background color to the active button */
-  .btn.active {
-    background-color: #666;
-     color: white;
-  }
+.success:hover {
+    background-color: #000000;
+    color: white;
+}
+
